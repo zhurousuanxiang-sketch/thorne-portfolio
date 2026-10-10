@@ -1,0 +1,75 @@
+/* Approved refinements on the published moon-and-valley composition. */
+.hero{border-bottom:0}
+.hero:after{content:'';position:absolute;left:0;right:0;bottom:0;height:clamp(110px,21vh,180px);background:linear-gradient(0deg,#101817 0%,#101817c9 30%,#10181700 100%);z-index:2;pointer-events:none}
+.work-section{padding-top:58px;overflow:clip;background:linear-gradient(180deg,#101817 0,transparent 180px),radial-gradient(ellipse at 0% 30%,#51797b25,transparent 50%),radial-gradient(ellipse at 98% 88%,#95754d20,transparent 42%),linear-gradient(160deg,#162022,#111718 52%,#171d1a)}
+.work-section:before{mask-image:linear-gradient(180deg,transparent,#000 160px);-webkit-mask-image:linear-gradient(180deg,transparent,#000 160px)}
+.work-section .section-heading{margin:25px 0 32px}
+.work-section:after,.design-section:after{background-image:url('./assets/lunar-orbits.svg'),url('./assets/surface-lines.svg'),linear-gradient(#b6cfcc08 1px,transparent 1px),linear-gradient(90deg,#b6cfcc08 1px,transparent 1px);background-size:100% 100%,100% 100%,112px 112px,112px 112px;background-position:center;opacity:.62;mask-image:linear-gradient(90deg,#000 0%,#0008 16%,#0002 35%,#0001 65%,#0008 84%,#000 100%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#0008 16%,#0002 35%,#0001 65%,#0008 84%,#000 100%)}
+.design-section:after{opacity:.5;background-size:100% 100%,100% 100%,144px 144px,144px 144px}
+.contact-section{overflow:clip}
+.contact-section:after{content:'';position:absolute;right:2%;top:50%;width:110px;height:110px;border-radius:50%;z-index:-1;pointer-events:none;transform:translateY(-50%) rotate(-18deg);background:linear-gradient(100deg,#14201900,#142019d9 60%,#142019 100%),url('./assets/moon-color-nasa.jpg') center/cover;opacity:.075;box-shadow:0 0 0 22px #b4c8b409,0 0 0 54px #b4c8b406}
+.about-section:after{content:'';position:absolute;right:-120px;bottom:-120px;width:330px;height:330px;border:1px solid #b4c8b415;border-radius:50%;pointer-events:none;z-index:-1;box-shadow:0 0 0 34px #b4c8b408,0 0 0 70px #b4c8b406}
+.about-section{overflow:hidden}
+
+.card-heading>.card-type{font-size:10px;letter-spacing:1.1px;color:#9ea992}
+.card-caption h3>span{font-size:11px;line-height:1.5;letter-spacing:.5px;color:#98a38f;margin-top:5px}
+.work-grid[data-filter="all"] .featured .card-caption h3>span{font-size:12px;letter-spacing:.8px}
+.heading-en{color:#a3ad9b}.section-footnote{color:#9ca891;letter-spacing:.5px;gap:20px}
+.design-footnote{font-size:11px;line-height:1.7;letter-spacing:.5px;color:#9ca99e;margin:25px 0 0}
+.design-card-caption{justify-content:flex-start}
+.frame-process{min-height:150px;padding-block:28px}
+.process-emblem{width:116px;height:116px;opacity:.1;right:-36px}
+.process-emblem i:nth-child(2){inset:20px}.process-emblem i:nth-child(3){inset:40px}
+
+.preview-hit{touch-action:manipulation;user-select:none;-webkit-user-select:none}
+.cover-dissolve{position:absolute;z-index:8;pointer-events:none;contain:layout style}
+.hover-video{transition:opacity .12s}.hover-video.playing{opacity:1}
+.card-art{transition:transform .7s cubic-bezier(.2,.8,.2,1),opacity .15s}
+.work-card .card-visual:after{content:none}
+.work-card.selected .card-art{transform:none}
+.work-card.selected .card-visual{border-color:var(--selection-accent)}
+/* Four corners arrive once and hold; there is no running stroke or loop. */
+.selection-frame{--corner-size:18px;inset:-7px;transform:none;transition:opacity .32s ease}
+.featured .selection-frame{--corner-size:24px}
+.selection-frame:before{content:'';position:absolute;inset:0;border:1px solid currentColor;opacity:0;transition:opacity .45s ease}
+.selected .selection-frame:before{opacity:.09}
+.selection-frame .selection-bracket{width:8px;height:8px;opacity:.25;transition:width .52s cubic-bezier(.2,.8,.2,1),height .52s cubic-bezier(.2,.8,.2,1),transform .52s cubic-bezier(.2,.8,.2,1),opacity .35s ease}
+.selection-frame .selection-bracket:nth-of-type(1){transform:translate(-3px,-3px)}
+.selection-frame .selection-bracket:nth-of-type(2){transform:translate(3px,-3px)}
+.selection-frame .selection-bracket:nth-of-type(3){transform:translate(-3px,3px)}
+.selection-frame .selection-bracket:nth-of-type(4){transform:translate(3px,3px)}
+.selected .selection-frame .selection-bracket{width:var(--corner-size);height:var(--corner-size);opacity:.8;transform:translate(0,0)}
+.motion-off .selection-frame,.motion-off .selection-frame:before,.motion-off .selection-frame .selection-bracket{transition:none}
+@media(max-width:1100px){.contact-section:after{right:-20px}}
+@media(max-width:760px){
+  .hero:after{height:130px}.work-section{padding-top:40px}.work-section .section-heading{margin:22px 0 28px;gap:20px}
+  .work-section:after,.design-section:after{background-size:170% 100%,180% 100%,96px 96px,96px 96px;opacity:.4}
+  .card-heading>.card-type{font-size:9px;letter-spacing:.8px}.card-caption h3>span{font-size:10px;letter-spacing:.2px}
+  .work-grid[data-filter="all"] .featured .card-caption h3>span{font-size:12px;letter-spacing:.6px}
+  .selection-frame{--corner-size:14px;inset:-5px}.featured .selection-frame{--corner-size:20px}
+  .section-footnote{gap:14px;align-items:flex-start;font-size:11px}.media-count{max-width:46%;text-align:right;line-height:1.7}
+  .frame-process{min-height:150px;padding-block:24px;gap:20px}.process-heading{display:flex;align-items:center;justify-content:space-between;gap:12px}.process-heading p{font-size:15px;letter-spacing:.5px;margin:0}.process-kicker{font-size:9px;letter-spacing:1px}.process-path{gap:12px}
+  .process-emblem{opacity:.08}.design-footnote{font-size:11px;margin-top:22px}.contact-section:after{right:0;top:auto;bottom:-24px;transform:rotate(-18deg);width:90px;height:90px;opacity:.065}
+}
+@media(prefers-reduced-motion:reduce){.cover-dissolve{display:none}.hover-video,.card-art,.selection-frame,.selection-frame:before,.selection-frame .selection-bracket{transition:none}}
+
+/* The film and its caption share one fixed viewport; the footer always stays below the controls. */
+.is-film .viewer-shell{grid-template-rows:64px minmax(0,1fr) auto}
+.is-film .viewer-header .eyebrow{display:none}
+.is-film .viewer-details{align-self:stretch;display:grid;grid-template-columns:minmax(140px,190px) minmax(0,1fr);gap:24px;padding:16px 0 18px;border-top:1px solid #ffffff12}
+.viewer-type{font-size:11px;line-height:1.75;color:#b8c8b7;letter-spacing:.5px}
+.is-film .viewer-details>p{max-width:none;font-size:12px;line-height:1.75;color:#929b91;margin:0}
+.is-design .viewer-type{display:none}
+.cursor-ring{left:0;top:0;will-change:translate}
+@media(max-width:760px){
+  .is-film .viewer-shell{grid-template-rows:62px minmax(0,1fr) auto}
+  .is-film .viewer-details{grid-template-columns:1fr;gap:5px;padding:12px 0 15px}
+  .viewer-type{font-size:10px;line-height:1.5}
+  .is-film .viewer-details>p{font-size:11px;line-height:1.7}
+}
+@media(max-height:500px) and (orientation:landscape){
+  .is-film .viewer-shell{grid-template-rows:44px minmax(0,1fr) auto}
+  .is-film .viewer-details{grid-template-columns:minmax(120px,160px) minmax(0,1fr);gap:16px;padding:7px 0 9px}
+  .viewer-type,.is-film .viewer-details>p{font-size:10px;line-height:1.6}
+}
+

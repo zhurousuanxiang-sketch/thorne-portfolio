@@ -1,0 +1,28 @@
+.cursor-ring{width:42px;height:42px;border-color:rgba(213,252,87,.7)}
+.cursor-ring span{display:none}
+.cursor-ring.visible{opacity:.65}
+.moon-stage{position:absolute;left:73.5%;top:38%;width:65vw;height:65vw;max-width:1160px;max-height:1160px;min-width:620px;min-height:620px;transform:translate(-50%,-50%);pointer-events:none}
+.moon-canvas{width:100%;height:100%;display:block;opacity:0;transition:opacity .8s ease}
+.moon-ready .hero-art{background-image:url('./assets/hero-background.png')}
+.moon-ready .moon-canvas{opacity:1}
+@media(max-width:760px){.moon-stage{left:75%;top:39%;width:850px;height:850px;min-width:0;min-height:0}.moon-ready .hero-art{background-position:62% center}}
+@media(max-width:450px){.moon-stage{left:74%;top:39%;width:740px;height:740px}}
+@media(prefers-reduced-motion:reduce){.moon-canvas{transition:none}}
+.moon-stage{left:74%;top:38%;width:58vw;height:58vw}
+.moon-ready .hero-shade{background:linear-gradient(90deg,rgba(6,8,5,.86) 0%,rgba(7,10,7,.22) 43%,transparent 62%),linear-gradient(0deg,#101110 0%,transparent 27%)}
+.moon-ready .hero-content{text-shadow:0 2px 30px rgba(0,0,0,.48)}
+.hero-art{background-image:url('./assets/lunar-hero-poster.jpg')}
+.intro-scene{background-image:linear-gradient(rgba(10,16,22,.12),rgba(10,16,22,.48)),url('./assets/lunar-hero-poster.jpg')}
+.moon-ready .hero-art{background-image:url('./assets/hero-background.png')}
+.moon-ready .moon-canvas{transition:none}
+.moon-ready .hero-actions{text-shadow:none}
+.lunar-stars{position:absolute;inset:0;pointer-events:none}
+.lunar-stars i{position:absolute;width:var(--size);height:var(--size);border-radius:50%;background:#c5e5ff;box-shadow:0 0 7px rgba(174,215,255,.6);animation:lunar-twinkle var(--duration) var(--delay) ease-in-out infinite alternate}
+.moon-sleep .lunar-stars i{animation-play-state:paused}
+.lunar-credit{display:block;margin-top:4px;color:#758793;font-size:12px;letter-spacing:.2px}
+.lunar-credit:hover{color:#b9dcf7}
+@keyframes lunar-twinkle{from{opacity:.18;transform:scale(.75)}to{opacity:.7;transform:scale(1.1)}}
+@media(max-width:760px){.moon-stage{left:82%;top:36%;width:790px;height:790px}.moon-ready .hero-shade{background:linear-gradient(90deg,rgba(7,11,15,.75),rgba(7,11,15,.22)),linear-gradient(0deg,#101110,transparent 38%)}}
+@media(max-width:450px){.moon-stage{left:85%;top:33%;width:720px;height:720px}}
+@media(prefers-reduced-motion:reduce){.lunar-stars i{animation:none}}
+

@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#101110">
+  <meta name="description" content="THORNE 徐腾的作品集，AIGC 影像、广告视频与角色、场景、风格概念设计。">
+  <title>THORNE 徐腾 · 影像与概念设计</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%23101110'/%3E%3Cpath d='M20 5 35 20 20 35 5 20Z' fill='none' stroke='%23d5fc57' stroke-width='2'/%3E%3Cpath d='M20 12 28 20 20 28 12 20Z' fill='%23d5fc57'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./motion.css">
+  <link rel="stylesheet" href="./interaction.css?v=20261010-3">
+  <link rel="stylesheet" href="./atmosphere.css?v=20261010-3">
+  <link rel="stylesheet" href="./refinements.css?v=20261010-3">
+  <script src="./content.js?v=20261010-3" defer></script>
+  <script src="./player.js?v=20261010-3" defer></script>
+  <script src="./dissolve.js?v=20261010-3" defer></script>
+  <script src="./app.js?v=20261010-3" defer></script>
+  <script src="./moon.js?v=20261010-3" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#work">跳至作品</a>
+  <div class="intro finished" id="intro" aria-hidden="true">
+    <div class="intro-half intro-left"><div class="intro-scene"></div><div class="intro-mesh"></div><span class="intro-word">BEYOND</span></div>
+    <div class="intro-half intro-right"><div class="intro-scene"></div><div class="intro-mesh"></div><span class="intro-word">REALITY</span></div>
+    <svg class="intro-seam" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0 0L100 100" pathLength="100"/></svg>
+    <div class="intro-reticle"><i></i><i></i><i></i><i></i></div>
+    <div class="intro-sign"><span class="diamond-mark"></span><span class="intro-brand">THORNE / 徐腾</span><small>ENTER A DIFFERENT REALITY</small><span class="intro-meter"></span></div>
+  </div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="THORNE 徐腾首页"><span class="brand-symbol" aria-hidden="true"></span><span>THORNE<span class="brand-cn"> / 徐腾</span></span></a>
+    <nav aria-label="主导航"><a href="#work" class="nav-link">影像作品<span>01</span></a><a href="#design" class="nav-link">概念设计<span>02</span></a><a href="#about" class="nav-link">关于<span>03</span></a></nav>
+    <div class="header-actions"><button class="motion-toggle" id="motion-toggle" aria-pressed="true"><span class="motion-icon" aria-hidden="true">◈</span><span class="motion-label">动态开启</span></button><button class="replay-button" id="replay-intro" aria-label="重播斜向开场动画" title="重播开场"><span class="small-diamond" aria-hidden="true"></span></button></div>
+  </header>
+  <main>
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true"><div class="moon-stage"><canvas class="moon-canvas" id="moon-canvas"></canvas></div></div><div class="hero-shade" aria-hidden="true"></div>
+      <div class="hero-grid" aria-hidden="true"><span class="hero-diamond one"></span><span class="hero-diamond two"></span><span class="hero-diamond three"></span></div>
+      <div class="hero-coordinate top">IMAGINATION HAS NO EDGE</div><div class="hero-coordinate right">VISUAL EXPERIMENTS / 001—010</div>
+      <div class="hero-content"><p class="eyebrow"><span></span>THORNE / 徐腾 · AIGC FILMS & CONCEPT DESIGN</p><h1 id="hero-title"><span class="outline-text">BEYOND</span><span>THE FRAME<span class="title-dot">.</span></span></h1><p class="hero-copy">让想象，走出画面。<br><span>影像 · 广告 · 概念设计</span></p><div class="hero-actions"><a href="#work" class="button primary"><span class="play-icon" aria-hidden="true"></span>探索影像作品</a><a href="#design" class="text-link">进入概念世界<span class="link-plus" aria-hidden="true">+</span></a></div></div>
+      <div class="hero-bottom"><div class="discipline-list"><span>AI FILMMAKING</span><span>ART DIRECTION</span><span>WORLD BUILDING</span></div><a href="#work" class="scroll-cue"><span class="scroll-line" aria-hidden="true"></span>SCROLL TO EXPLORE</a><span class="hero-index">PORTFOLIO / 2026</span></div>
+    </section>
+    <section class="work-section section-wrap" id="work" aria-labelledby="work-title">
+      <div class="section-topline"><span>01 / MOTION PICTURE</span><span>想象，开始流动。</span></div>
+      <div class="section-heading"><h2 id="work-title">影像作品<span class="heading-en">SELECTED FILMS</span></h2><div class="work-filters" role="group" aria-label="筛选影像作品"><button class="filter active" data-filter="all" aria-pressed="true">全部<span>10</span></button><button class="filter" data-filter="aigc" aria-pressed="false">AIGC<span>06</span></button><button class="filter" data-filter="ad" aria-pressed="false">广告<span>04</span></button></div></div>
+      <div class="work-grid" id="work-grid" data-filter="all"></div>
+      <p class="section-footnote"><span id="work-note">当前为演示素材，正式作品待更新。</span><span class="media-count">静音预览 · 双击大屏播放</span></p>
+    </section>
+    <section class="frame-process section-wrap" aria-label="创作过程"><div class="process-heading"><span class="process-kicker">THORNE / PROCESS</span><p>想象，逐帧成形。</p></div><div class="process-path"><div><span class="process-number">01</span><span>概念<small>CONCEPT</small></span></div><span class="process-connector" aria-hidden="true"></span><div><span class="process-number">02</span><span>画面<small>FRAME</small></span></div><span class="process-connector" aria-hidden="true"></span><div><span class="process-number">03</span><span>影像<small>MOTION</small></span></div></div><div class="process-emblem" aria-hidden="true"><i></i><i></i><i></i></div></section>
+    <section class="design-section section-wrap" id="design" aria-labelledby="design-title"><div class="section-topline"><span>02 / CONCEPT LAB</span><span>画面之外，世界之内。</span></div><div class="section-heading"><h2 id="design-title">概念设计<span class="heading-en">THE IDEA BEFORE THE FRAME</span></h2><p class="design-lead">从一个角色，到一整个世界。</p></div><div class="design-grid" id="design-grid"></div><p class="design-footnote">当前为演示概念图，正式设计作品待更新。</p></section>
+    <section class="about-section section-wrap" id="about" aria-labelledby="about-title"><div class="about-mark" aria-hidden="true"><span></span><span></span><span></span></div><div class="about-content"><p class="eyebrow">03 / ABOUT THORNE</p><p class="about-name">徐腾 <span>THORNE</span></p><h2 id="about-title">以想象为起点，<br>以画面为语言。</h2><p>以 AIGC 影像、广告创意与视觉设计，探索画面的更多可能。<br>从角色设定、场景构建到风格实验，让每个想法拥有自己的世界。</p><div class="about-tags"><span>AIGC 影像</span><span>广告创意</span><span>视觉开发</span></div></div><div class="about-aside">THINK OUTSIDE.<br><span>CREATE BEYOND.</span></div></section>
+    <section class="contact-section section-wrap" id="contact" aria-labelledby="contact-title"><div class="contact-intro"><p class="contact-kicker">CONTACT / THORNE</p><h2 id="contact-title">联系 THORNE<span>让下一个想法，成为画面。</span></h2></div><div class="contact-channel"><a class="contact-email" id="contact-email" href="mailto:3087268607@qq.com" aria-label="发送邮件联系 THORNE：3087268607@qq.com">3087268607@qq.com<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a><div class="contact-meta"><span>徐腾 · AIGC 影像 / 广告创意</span><button id="copy-email" class="copy-email" aria-label="复制联系邮箱">复制邮箱</button><span id="contact-status" class="contact-status" role="status"></span></div></div></section>
+  </main>
+  <footer class="site-footer"><a class="brand" href="#home" aria-label="THORNE 徐腾首页"><span class="brand-symbol" aria-hidden="true"></span><span>THORNE<span class="brand-cn"> / 徐腾</span></span></a><span>IMAGINATION, IN MOTION.<a class="lunar-credit" href="https://svs.gsfc.nasa.gov/4720/" target="_blank" rel="noopener noreferrer">LUNAR TEXTURE · NASA / SVS</a></span><a href="#home">回到顶部<span class="link-plus" aria-hidden="true">+</span></a></footer>
+  <dialog class="viewer" id="viewer" aria-labelledby="viewer-title" aria-describedby="viewer-description"><div class="viewer-shell"><header class="viewer-header"><div><span id="viewer-label" class="eyebrow"></span><h2 id="viewer-title"></h2></div><button class="close-viewer" id="close-viewer" aria-label="关闭作品">×</button></header><div class="viewer-media" id="viewer-media"></div><div class="viewer-details"><span class="viewer-type" id="viewer-type"></span><p id="viewer-description"></p></div><button class="viewer-arrow viewer-prev" id="prev-work" aria-label="查看上一件作品"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5l-7 7 7 7"/></svg></button><button class="viewer-arrow viewer-next" id="next-work" aria-label="查看下一件作品"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 5l7 7-7 7"/></svg></button></div></dialog>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"><i></i><i></i><i></i><i></i><b></b></div>
+</body>
+</html>
+
+
+
